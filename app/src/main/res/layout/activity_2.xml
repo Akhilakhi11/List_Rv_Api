@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity2">
+
+    <ImageView
+        android:id="@+id/img_details"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_margin="30dp"
+        android:src="@drawable/ic_launcher_foreground"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/fname_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="First Name"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_details"/>
+
+    <TextView
+        android:id="@+id/lname_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" Last Name"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/fname_details"
+        app:layout_constraintLeft_toRightOf="@id/fname_details"/>
+
+
+    <TextView
+        android:id="@+id/email_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="15sp"
+        android:text="Email"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="@id/fname_details"
+        app:layout_constraintTop_toBottomOf="@id/fname_details"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
