@@ -45,14 +45,11 @@ public class MainActivity extends AppCompatActivity {
 
                     myAdapter.OnRecyclerViewClickListener(new MyAdapter.OnRecyclerViewClickListener() {
                         @Override
-                        public void OnItemClick(DataItem name) {
+                        public void OnItemClick(ProductListresponse.DataItem name) {
 
                             Intent intent = new Intent(MainActivity.this,Activity2.class);
-                            intent.putExtra("imgnet",name.getAvatar());
-                            intent.putExtra("fnamenet",name.getFirstName());
-                            intent.putExtra("lnamenet",name.getLastName());
-                            intent.putExtra("emailnet",name.getEmail());
-                            startActivity(intent);
+                  intent.putExtra("dataitem",name);
+                  startActivity(intent);
                         }
 
                     });

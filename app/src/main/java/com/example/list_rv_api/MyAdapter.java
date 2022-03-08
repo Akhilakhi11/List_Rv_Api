@@ -13,23 +13,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
+import org.parceler.Parcel;
+
 import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>
 {
-    List<DataItem>data;
+    List<ProductListresponse.DataItem>data;
     Context context;
 
     private OnRecyclerViewClickListener listener;
 
     public interface OnRecyclerViewClickListener{
-        void OnItemClick(DataItem position);
+        void OnItemClick(ProductListresponse.DataItem position);
     }
     public void OnRecyclerViewClickListener (OnRecyclerViewClickListener listener){
         this.listener = (OnRecyclerViewClickListener) listener;
     }
 
-    public MyAdapter(Context context, List<DataItem> data){
+    public MyAdapter(Context context, List<ProductListresponse.DataItem> data){
         this.data = data;
         this.context = context;
     }
