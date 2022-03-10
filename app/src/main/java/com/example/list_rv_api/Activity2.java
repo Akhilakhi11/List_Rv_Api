@@ -2,6 +2,7 @@ package com.example.list_rv_api;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -17,8 +18,6 @@ public class Activity2 extends AppCompatActivity {
     ImageView img_details;
     @BindView(R.id.fname_details)
     TextView fname_details;
-    @BindView(R.id.lname_details)
-    TextView lname_details;
     @BindView(R.id.email_details)
     TextView email_details;
     ProductListresponse.DataItem dataItem;
@@ -38,7 +37,6 @@ public class Activity2 extends AppCompatActivity {
 //        }
 
         fname_details.setText(dataItem.getFirstName()+" "+dataItem.getLastName());
-        lname_details.setText(dataItem.getLastName());
         email_details.setText(dataItem.getEmail());
         Glide.with(this).asBitmap().load(dataItem.getAvatar()).into(img_details);
 

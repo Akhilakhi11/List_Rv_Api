@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.List_Rv_Api">
         <activity
-            android:name=".Activity2"
+            android:name=".Activity4"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity3"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -23,6 +23,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".Activity2"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"></activity>
     </application>
 
 </manifest>

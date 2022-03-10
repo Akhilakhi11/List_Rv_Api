@@ -5,13 +5,21 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
+import java.text.BreakIterator;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -22,7 +30,11 @@ public class MainActivity extends AppCompatActivity {
     TextView tvname;
     @BindView(R.id.rvlist)
     RecyclerView rvlist;
+    @BindView(R.id.fabbtn)
+    FloatingActionButton fabbtn;
     private Object thumbnail;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,14 +56,14 @@ public class MainActivity extends AppCompatActivity {
                     Log.i("response", String.valueOf(response.body().getData()));
 
                     myAdapter.OnRecyclerViewClickListener(new MyAdapter.OnRecyclerViewClickListener() {
+
                         @Override
                         public void OnItemClick(ProductListresponse.DataItem name) {
 
-                            Intent intent = new Intent(MainActivity.this,Activity2.class);
-                  intent.putExtra("dataitem",name);
-                  startActivity(intent);
+                            Intent intent = new Intent(MainActivity.this, Activity2.class);
+                            intent.putExtra("dataitem", name);
+                            startActivity(intent);
                         }
-
                     });
                 }
             }
@@ -62,6 +74,11 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+    @OnClick(R.id.fabbtn)
+    public void onAddClick (View v){
+        Intent intent = new Intent(MainActivity.this, Activity4.class);
+        startActivity(intent);
     }
 
 }
