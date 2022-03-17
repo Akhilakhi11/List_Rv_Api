@@ -14,4 +14,7 @@ public interface Interface_Api {
     @POST("users")
     Call<UserResponse> postUser(@Body  UserRequest userRequest);
 
+    @POST("login")
+    Call<LoginResponse> postUser(@Body LoginRequest userResponse);
+
 }

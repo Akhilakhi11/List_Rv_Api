@@ -6,18 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".Activity4">
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imgpic"
+        android:layout_marginTop="50dp"
+        android:layout_width="150dp"
+        android:layout_height="100dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_launcher_foreground"
+        />
+
     <TextView
         android:id="@+id/nametv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
         android:text="Name:"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.286" />
+        app:layout_constraintRight_toLeftOf="@id/imgpic"
+        app:layout_constraintTop_toBottomOf="@id/imgpic" />
 
     <EditText
         android:id="@+id/nameed"
@@ -36,13 +48,14 @@
         android:id="@+id/jobtv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:padding="10dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="60dp"
         android:text="Job"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintTop_toBottomOf="@id/nametv"
         app:layout_constraintLeft_toLeftOf="@id/nametv"
-       />
+        app:layout_constraintTop_toBottomOf="@id/nametv" />
 
     <EditText
         android:id="@+id/jobed"
@@ -51,9 +64,10 @@
         android:hint="Job"
         android:textColor="@color/black"
         android:textSize="20sp"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toRightOf="@id/jobtv"
-        app:layout_constraintTop_toTopOf="@id/jobtv"/>
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@id/jobtv" />
 
     <Button
         android:id="@+id/login"
@@ -61,14 +75,21 @@
         android:layout_height="wrap_content"
         android:text="LOGIN"
         android:textSize="15dp"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toLeftOf="@id/jobed"/>
+        app:layout_constraintRight_toLeftOf="@id/jobed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.667" />
 
-
-
-
-
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabedit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:backgroundTint="#00FF38"
+        android:src="@drawable/ic_baseline_edit_24"
+        app:layout_constraintLeft_toRightOf="@id/imgpic"
+        app:layout_constraintBottom_toBottomOf="@id/imgpic"
+        />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

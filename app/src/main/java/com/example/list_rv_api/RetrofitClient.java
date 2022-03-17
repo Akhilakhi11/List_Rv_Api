@@ -9,7 +9,6 @@ public class RetrofitClient {
     private static String BASE_URL = "https://reqres.in/api/";
 
     public static Retrofit getRetrofitInstance() {
-
             retrofit = new Retrofit.Builder()
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
